@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include<stdbool.h>
+
+bool Power_Of_Two(int num) {
+    if (num <= 0) 
+        return false;
+    if (num & (num - 1)) 
+        return false;
+    else 
+        return true;
+}
+
+int main() {
+    int num;
+    printf("Give me the number to see if it's a power of 2: ");
+    scanf("%d", &num);
+    printf("The number is power of 2: %s \n", Power_Of_Two(num) ? "True" : "False");
+}
